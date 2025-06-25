@@ -7,12 +7,12 @@
     --card-bg: #ffffff;
     --border-light: #f0f0f0;
     --star-gold: #FFD700;
-    --dark-pink-bg: #E83E8C; /* Your existing dark pink */
-    --offcanvas-bg-dark: #222; /* Dark background for offcanvas */
-    --offcanvas-border-dark: #333; /* Darker border for offcanvas elements */
-    --call-button-pink: #e91e63; /* This matches the screenshot's exact pink for the call bar */
-    --offcanvas-text-light-grey: #bbb; /* For subtitles and placeholders */
-    --offcanvas-search-bg: #2b2b2b; /* Slightly lighter dark for search background */
+    --dark-pink-bg: #E83E8C; 
+    --offcanvas-bg-dark: #222; 
+    --offcanvas-border-dark: #333;
+    --call-button-pink: #e91e63; 
+    --offcanvas-text-light-grey: #bbb; 
+    --offcanvas-search-bg: #2b2b2b; 
 }
 
 body {
@@ -135,6 +135,8 @@ a {
     background-color: #fff;
     border-radius: 50%;
     padding: 15px;
+    height: 60px;
+    width: 60px;
     box-shadow: 0 4px 10px rgba(0,0,0,.1);
     color: var(--primary-pink);
     font-size: 2rem;
@@ -983,18 +985,18 @@ a {
             margin: 0;
         }
 
-        .site-footer .footer-links ul li {
+        .site-footer .footer-links  li {
             margin-bottom: 10px;
         }
 
-        .site-footer .footer-links ul li a {
-            color: #eee;
+        .site-footer .footer-links li a {
+            color: #eee !important;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
-        .site-footer .footer-links ul li a:hover {
-            color: #e91e63;
+        .site-footer .footer-links li a:hover {
+            color: #e91e63 !important;
         }
 
         .site-footer .footer-contact-info p {
@@ -1006,11 +1008,11 @@ a {
             color: #e91e63;
         }
 
-        .site-footer .footer-newsletter .form-control {
+        .site-footer .footer-newsletter input {
             border-radius: 50px;
             border: 1px solid #555;
-            background-color: #333;
-            color: white;
+            /* background-color: #333; */
+            color: white !important;
             padding-right: 50px;
         }
 
