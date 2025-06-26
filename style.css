@@ -165,76 +165,70 @@ a {
     margin: auto;
 }
 
-/* Offcanvas for mobile menu - REVISED STYLES */
 .offcanvas-top {
-    height: 100vh; /* Make offcanvas cover full viewport height */
-    max-height: 100vh; /* Ensure it doesn't exceed */
-    background-color: var(--offcanvas-bg-dark); /* Dark background for offcanvas */
-    color: #fff; /* White text for offcanvas */
-    transform: translateY(-100%); /* Start hidden at top */
-    transition: transform .3s ease-in-out; /* Smooth transition */
-    display: flex; /* Make offcanvas a flex container */
-    flex-direction: column; /* Stack its children vertically */
+    height: 100vh; 
+    max-height: 100vh;
+    color: black;
+    transform: translateY(-100%); 
+    transition: transform .3s ease-in-out; 
+    display: flex; 
+    flex-direction: column;
 }
 
 .offcanvas-top.show {
-    transform: translateY(0); /* Slide in */
+    transform: translateY(0);
 }
 
-/* Offcanvas Header */
 .offcanvas .offcanvas-header {
-    background-color: var(--offcanvas-bg-dark) !important; /* Dark background for header */
-    border-bottom: 1px solid var(--offcanvas-border-dark); /* Slightly lighter border */
-    color: #fff;
-    padding: 20px 24px 10px 24px; /* Adjust padding to match screenshot */
-    flex-shrink: 0; /* Prevent header from shrinking */
-    position: relative; /* For z-index to be above search section if needed */
-    z-index: 2; /* Ensures it stays above the scrollable content */
+    border-bottom: 1px solid var(--offcanvas-border-dark);
+    padding: 30px 24px 30px 24px; 
+    flex-shrink: 0; 
+    position: relative; 
+    z-index: 2; 
 }
 
 .offcanvas .offcanvas-title {
-    color: #fff;
+    color: var(--primary-pink);
     font-weight: bold;
 }
 
 .offcanvas .btn-close {
-    filter: invert(1); /* Makes the close button white */
+    filter: invert(1); 
+    color: black;
 }
 
-/* Top info section styles (Subtitle) */
 .offcanvas .top-info {
-    background-color: var(--offcanvas-bg-dark); /* Use specific dark background */
+    background-color: var(--offcanvas-bg-dark);
     color: var(--offcanvas-text-light-grey);
-    padding: 5px 24px 10px 24px; /* Adjust padding to match screenshot */
-    flex-shrink: 0; /* Prevent top info from shrinking */
-    border-bottom: 1px solid var(--offcanvas-border-dark); /* Separator */
-    position: relative; /* For z-index */
-    z-index: 2; /* Ensures it stays above the scrollable content */
+    padding: 5px 24px 10px 24px; 
+    flex-shrink: 0;
+    border-bottom: 1px solid var(--offcanvas-border-dark); 
+    position: relative;
+    z-index: 2; 
 }
 .offcanvas .offcanvas-subtitle {
-    color: inherit; /* Inherit color from top-info */
-    font-size: 0.9rem; /* Adjust font size */
-    margin-bottom: 0; /* Remove default margin */
+    color: inherit; 
+    font-size: 0.9rem; 
+    margin-bottom: 0; 
 }
 
 
-/* Style for the search input group */
+
 .offcanvas .search-section {
-    background-color: var(--offcanvas-search-bg); /* Slightly lighter dark for search background */
-    padding: 15px 24px; /* Padding around search bar */
-    border-bottom: 1px solid var(--offcanvas-border-dark); /* Separator */
-    flex-shrink: 0; /* Prevent search section from shrinking */
-    position: relative; /* For z-index */
-    z-index: 1; /* Below header/top-info but above scrollable nav */
+    padding: 0px 24px; 
+    flex-shrink: 0; 
+    position: relative; 
+    z-index: 1; 
 }
 .offcanvas .input-group input {
     color: #fff;
     background-color: transparent;
     border: none;
-    box-shadow: none; /* Remove focus outline */
-    padding: 10px 15px; /* Adjust input padding */
-    border-radius: 8px; /* Slightly rounded search input */
-    background-color: rgba(255, 255, 255, 0.1); /* Subtle background for input */
+    box-shadow: none; 
+    padding: 10px 15px; 
+    border-radius: 8px; 
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--offcanvas-border-dark); 
 }
 .offcanvas .input-group input::placeholder {
     color: var(--offcanvas-text-light-grey);
@@ -244,58 +238,51 @@ a {
     background-color: transparent;
     border: none;
     padding: 10px 15px;
+    border: 1px solid var(--offcanvas-border-dark);
 }
 .offcanvas .input-group .btn:hover {
-    color: #fff; /* White on hover for search icon */
+    color: #fff; 
 }
 
 
-/* Wrapper for scrollable content */
 .offcanvas-content-wrapper {
-    flex-grow: 1; /* This will take up remaining vertical space */
-    overflow-y: auto; /* Allow this wrapper to scroll */
-    padding: 0; /* Reset default padding if any */
-    background-color: var(--offcanvas-bg-dark); /* Ensure background for scrollable area */
+    flex-grow: 1; 
+    overflow-y: auto;
+    padding: 0; 
 }
 
-/* Adjust offcanvas body to use flexbox for better layout control */
 .offcanvas-body {
-    padding: 0; /* Reset default Bootstrap padding */
-    display: flex; /* Make it a flex container */
-    flex-direction: column; /* Stack children vertically */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
-
-
-/* Navigation Links styling */
 .offcanvas .navbar-nav {
-    padding: 20px 0; /* Padding for the entire nav list */
+    padding: 20px 0; 
 }
 .offcanvas .navbar-nav .nav-item {
-    margin-bottom: 0; /* Remove default margin */
+    margin-bottom: 0; 
 }
 .offcanvas .navbar-nav .nav-link {
-    color: #fff !important; /* White links */
-    padding: 15px 24px; /* More padding for mobile links */
-    border-bottom: 1px solid var(--offcanvas-border-dark); /* Separator lines */
-    text-transform: uppercase; /* Match screenshot */
-    font-size: 1.25rem; /* Make them larger as in screenshot */
-    font-weight: 600; /* Bold as in screenshot */
-    display: flex; /* Use flex for potential dropdown arrow alignment */
-    justify-content: space-between; /* Push text to left, arrow to right */
+    color: black !important; 
+    padding: 15px 24px; 
+    text-transform: uppercase; 
+    font-size: 1.25rem; 
+    font-weight: 600; 
+    display: flex; 
+    justify-content: space-between; 
     align-items: center;
 }
 
 .offcanvas .navbar-nav .nav-link:hover {
-    color: var(--call-button-pink) !important; /* Use call button pink on hover */
+    color: var(--call-button-pink) !important;
 }
 
 .offcanvas .navbar-nav .nav-item:last-child .nav-link {
-    border-bottom: none; /* No border for the last link in the list (if it's the last element before social icons) */
+    border-bottom: none;
 }
 
-/* Dropdown specific styles within offcanvas */
 .offcanvas .navbar-nav .dropdown-menu {
-    background-color: #333; /* Darker background for dropdowns */
+    background-color: #333; 
     border: none;
     border-radius: 0;
     width: 100%;
@@ -305,64 +292,62 @@ a {
 }
 .offcanvas .navbar-nav .dropdown-item {
     color: #fff !important;
-    padding: 12px 34px; /* Indent sub-items */
+    padding: 12px 34px;
     background-color: transparent;
-    border-bottom: 1px solid #444; /* Lighter separator for sub-items */
-    font-size: 1.1rem; /* Slightly smaller than main links */
-    text-transform: capitalize; /* Keep normal capitalization for sub-items */
+    border-bottom: 1px solid #444; 
+    font-size: 1.1rem; 
+    text-transform: capitalize;
 }
 .offcanvas .navbar-nav .dropdown-item:hover {
-    background-color: #444; /* Hover background */
+    background-color: #444; 
     color: var(--call-button-pink) !important;
 }
 .offcanvas .navbar-nav .dropdown-item:last-child {
     border-bottom: none;
 }
-/* Ensure dropdown arrow is correct color */
+
 .offcanvas .navbar-nav .nav-link.dropdown-toggle::after {
-    filter: invert(1); /* Makes the arrow white */
+    filter: invert(1);
 }
 
 
-/* Social icons styling */
+
 .offcanvas .social-icons {
-    padding: 20px 0 40px 0; /* Vertical padding around social icons */
-    border-top: 1px solid var(--offcanvas-border-dark); /* Separator above social icons */
+    padding: 0px 0 0px 0; 
+    border-top: 1px solid var(--offcanvas-border-dark); 
 }
 .offcanvas .social-icons a {
-    font-size: 24px; /* Larger icons */
-    color: #fff; /* Ensure social icons are white */
+    font-size: 24px; 
+    color: black; 
     transition: color 0.3s ease;
 }
 .offcanvas .social-icons a:hover {
-    color: var(--call-button-pink); /* Pink on hover */
+    color: var(--call-button-pink); 
 }
 
-
-/* Styling for the fixed call button at the bottom of the offcanvas */
 .offcanvas-footer-call {
-    flex-shrink: 0; /* Prevent footer from shrinking */
-    background-color: var(--call-button-pink) !important; /* Use specific pink for the call bar */
-    box-shadow: 0 -2px 5px rgba(0,0,0,.2); /* Optional: subtle shadow */
-    position: sticky; /* Make it sticky */
+    flex-shrink: 0; 
+    background-color: var(--call-button-pink) !important; 
+    box-shadow: 0 -2px 5px rgba(0,0,0,.2); 
+    position: sticky; 
     bottom: 0;
     left: 0;
     right: 0;
     width: 100%;
-    z-index: 1050; /* Ensure it's on top */
-    padding: 1rem; /* Add padding for the call bar */
-    text-align: center; /* Center the content */
+    z-index: 1050; 
+    padding: 1rem;
+    text-align: center; 
 }
 .offcanvas-footer-call a {
-    color: #fff; /* Ensure text is white */
-    font-weight: bold; /* Make text bold */
-    font-size: 1.2rem; /* Adjust font size */
-    display: inline-flex; /* Align icon and text */
+    color: #fff; 
+    font-weight: bold; 
+    font-size: 1.2rem;
+    display: inline-flex;
     align-items: center;
-    gap: 10px; /* Space between icon and text */
+    gap: 10px; 
 }
 
-/* General Section Titles & Subtitles */
+
 .section-title {
     text-align: center;
     margin-bottom: 20px;
@@ -754,9 +739,8 @@ a {
     flex-grow: 1;
 }
 
-/* FAQ Section Specific Styles */
 .faq-section {
-    background-color: #fff; /* White background */
+    background-color: #fff; 
     padding: 80px 0;
 }
 
@@ -764,26 +748,26 @@ a {
     border: 1px solid var(--border-light);
     border-radius: 10px;
     margin-bottom: 15px;
-    overflow: hidden; /* Ensures rounded corners are respected */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.03); /* Subtle shadow */
+    overflow: hidden; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
 }
 
 .faq-accordion .accordion-header .accordion-button {
-    background-color: var(--card-bg); /* White background for button */
+    background-color: var(--card-bg);
     color: var(--text-dark);
     font-weight: 600;
     font-size: 1.1rem;
     padding: 20px 25px;
     border-radius: 10px;
-    box-shadow: none; /* Remove default Bootstrap shadow */
+    box-shadow: none;
     transition: background-color 0.3s ease;
 }
 
 .faq-accordion .accordion-header .accordion-button:not(.collapsed) {
     color: var(--primary-pink);
-    background-color: var(--light-pink); /* Light pink when open */
+    background-color: var(--light-pink); 
     border-bottom: 1px solid var(--primary-pink);
-    border-radius: 10px 10px 0 0; /* Only top corners rounded when open */
+    border-radius: 10px 10px 0 0; 
 }
 
 .faq-accordion .accordion-button:focus {
@@ -795,25 +779,25 @@ a {
     padding: 20px 25px;
     color: var(--text-light);
     font-size: 1rem;
-    background-color: var(--card-bg); /* White background for body */
+    background-color: var(--card-bg); 
     border-top: none;
 }
 
-/* Custom icon for accordion button */
+
 .faq-accordion .accordion-button::after {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FF69B4'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-    transform: translateY(-50%) rotate(-90deg); /* Initial state: arrow pointing right (collapsed) */
+    transform: translateY(-50%) rotate(-90deg); 
     transition: transform 0.2s ease-in-out;
 }
 
 .faq-accordion .accordion-button:not(.collapsed)::after {
-    transform: translateY(0%) rotate(0deg); /* Open state: arrow pointing down */
+    transform: translateY(0%) rotate(0deg); 
 }
 
 
 @media (max-width: 991.98px) {
     /* .navbar-nav { display: none; } */
-    /* .navbar-toggler { display: block; } */
+    .navbar-toggler { display: block; }
     .hero-section { padding: 60px 0; text-align: center; }
     .hero-content h1 { font-size: 2.5rem; }
     .hero-content p { font-size: 1rem; margin-left: auto; margin-right: auto; }
@@ -840,7 +824,6 @@ a {
     .clinic-info-card { padding: 30px; }
     .clinic-hours-list, .contact-details-list { font-size: 0.95rem; }
 
-    /* FAQ section specific mobile adjustments */
     .faq-section {
         padding: 40px 0;
     }
@@ -852,36 +835,30 @@ a {
         padding: 15px 20px;
         font-size: 0.95rem;
     }
-
-    /* Offcanvas mobile adjustments */
     .offcanvas .navbar-nav .nav-link {
-        font-size: 1.1rem; /* Adjust font size for mobile offcanvas links */
-        padding: 12px 20px; /* Adjust padding for mobile offcanvas links */
+        font-size: 1.1rem; 
+        padding: 12px 20px; 
     }
     .offcanvas .offcanvas-header,
     .offcanvas .top-info,
     .offcanvas .search-section {
-        padding-left: 20px; /* Match mobile padding to other sections */
+        padding-left: 20px; 
         padding-right: 20px;
     }
     .offcanvas-footer-call {
-        font-size: 1rem; /* Adjust font size for mobile call bar */
+        font-size: 1rem; 
         padding: 1rem;
     }
-
-    /* Adjust social icons for mobile */
     .offcanvas .social-icons {
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: 20px;
+        padding-bottom: 0px;
     }
     .offcanvas .social-icons a {
-        font-size: 20px; /* Slightly smaller icons on mobile */
+        font-size: 20px; 
     }
-
-    /* Adjust dropdowns for mobile */
     .offcanvas .navbar-nav .dropdown-item {
         font-size: 1rem;
-        padding: 10px 25px; /* Adjust padding for mobile dropdown items */
+        padding: 10px 25px; 
     }
 }
 
@@ -891,13 +868,12 @@ a {
     .testimonial-card-col { margin-bottom: 30px; }
 }
 
-/* New Contact Us Section Specific Styles */
 .contact-us-section {
     padding: 80px 0;
 }
 
 .contact-us-section .row.g-0 > div {
-    padding: 40px; /* Default padding for both columns */
+    padding: 40px; 
 }
 
 .bg-light-pink {
@@ -905,7 +881,7 @@ a {
 }
 
 .bg-light-gray {
-    background-color: #f8f9fa; /* A light gray similar to the image */
+    background-color: #f8f9fa; 
 }
 
 .contact-us-section h3 {
@@ -940,7 +916,7 @@ a {
 }
 
 .contact-us-section .btn-primary-custom {
-    width: auto; /* Allow button to size itself, not full width */
+    width: auto; 
 }
 
 .contact-us-section .bg-light-gray p {
@@ -1049,9 +1025,8 @@ a {
 
 
 @media (min-width: 992px) {
-    /* .navbar-toggler { display: none; } */
+    .navbar-toggler { display: none; }
     .contact-us-section .row.g-0 > div {
-        /* Ensure columns are sticky on desktop */
         height: 100%;
         display: flex;
         flex-direction: column;
