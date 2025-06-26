@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
 </head>
 <body>
 
@@ -19,8 +20,8 @@
             </svg>
             Athar Ali
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon border-0 outline-0 shadow-0"></span>
+        <button class="navbar-toggler border-0 outline-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
         </button>
 
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -55,8 +56,15 @@
 
 <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="height: 100vh;"> 
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">DR. ATHAR ALI</h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+            <a class="navbar-brand" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1.314C3.243-3.236-.881 4.757 3.712 8S2.222 13.914 8 13.914c5.778 0 1.288-5.914 6.288-9.914S12.757-3.236 8 1.314z"/>
+            </svg>
+            Athar Ali
+        </a>
+        </h5>
+        <button type="button" class="btn-close text-dark bg-dark text-reset border-0 outline-0 shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <!-- <div class="top-info px-4"> <h6 class="offcanvas-subtitle text-muted">Consulting Gynaecologist & Laparoscopic Surgeon</h6>
     </div> -->
@@ -114,13 +122,13 @@
         </div>
     </div>
 
-    <div class="offcanvas-footer-call text-center py-3" style="background-color: #f8f9fa;"> <a href="tel:+919565365773" class="text-decoration-none text-dark"> <i class="fas fa-phone-alt me-2"></i> +91 9565365773
+    <div class="offcanvas-footer-call text-center text-white py-3" style="background-color: #f8f9fa;"> <a href="tel:+919565365773" class="text-decoration-none text-white"> <i class="fas fa-phone-alt me-2"></i> +91 9565365773
         </a>
     </div>
 </div>
 
-<a href="https://wa.me/+919565365773" class="position-fixed bottom-0 end-0 me-3 mb-5" style="z-index: 1050;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="50">
+<a href="https://wa.me/+919565365773" class="position-fixed bottom-0 end-0 me-3 mb-5" style="z-index: 1050; width: 85px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="85">
 </a>
 
 
@@ -139,7 +147,7 @@
             </div>
             <div class="col-lg-6 col-md-12">
                 <div class="hero-image-container" style="height: 400px;">
-                    <img src="3.png" alt="Doctor Illustration" class="doctor-illustration" style="height: 100%; width:550px; object-fit: contain;">
+                    <img src="image/3.png" alt="Doctor Illustration" class="doctor-illustration" style="height: 100%; width:550px; object-fit: contain;">
                     <div class="plus-icon-1">+</div>
                     <div class="plus-icon-2">+</div>
                 </div>
@@ -222,7 +230,7 @@
             <div class="col-lg-5 col-md-12 mb-4 mb-lg-0">
                 <div class="doctor-card-about">
                     <div class="doctor-about-img-wrapper">
-                        <img src="3.png" alt="Dr. Priya Sharma Illustration" class="doctor-about-illustration" style="height: 100%;">
+                        <img src="image/3.png" alt="Dr. Priya Sharma Illustration" class="doctor-about-illustration" style="height: 100%;">
                         <div class="plus-icon-about-1">+</div>
                         <div class="plus-icon-about-2">+</div>
                     </div>
@@ -496,7 +504,7 @@
         </div>
     </div>
 </section>
-
+<!-- 
 <section class="contact-us-section">
     <div class="container px-4">
         <h2 class="section-title">Contact Us</h2>
@@ -548,7 +556,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <footer class="site-footer">
     <div class="container px-4">
