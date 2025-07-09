@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor - appointment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container px-4">
+        <a class="navbar-brand" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1.314C3.243-3.236-.881 4.757 3.712 8S2.222 13.914 8 13.914c5.778 0 1.288-5.914 6.288-9.914S12.757-3.236 8 1.314z"/>
+            </svg>
+            Clinic
+        </a>
+        <button class="navbar-toggler border-0 outline-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav align-items-lg-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="service.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="testimonial.html">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li> -->
+                <li class="nav-item ms-lg-3">
+                    <a href="tel:+919565365773" class="text-white text-decoration-none py-3 px-3 rounded" style="background-color: #e91e63;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-telephone-fill me-2" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.313 1.62a1.745 1.745 0 0 1 .163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702A18.6 18.6 0 0 1 0 7.025C0 3.868 2.304 1.562 1.885.511"/>
+                        </svg>
+                        +91 9565365773
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="height: 100vh;"> 
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+            <a class="navbar-brand" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1.314C3.243-3.236-.881 4.757 3.712 8S2.222 13.914 8 13.914c5.778 0 1.288-5.914 6.288-9.914S12.757-3.236 8 1.314z"/>
+            </svg>
+            Clinic
+        </a>
+        </h5>
+        <button type="button" class="btn-close text-dark bg-dark text-reset border-0 outline-0 shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+    <div class="offcanvas-content-wrapper">
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="service.html">Services</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="testimonial.html">Testimonial</a>
+                </li>
+            </ul>
+
+            <div class="search-section my-3 px-3"> <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+
+            <div class="social-icons text-center my-4">
+                <a href="#" class="mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="mx-2"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="mx-2"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="offcanvas-footer-call text-center text-white py-3" style="background-color: #f8f9fa;"> <a href="tel:+00000000000" class="text-decoration-none text-white"> <i class="fas fa-phone-alt me-2"></i> +91 00000000000
+        </a>
+    </div>
+</div>
+
+<a href="https://wa.me/+000000000000" class="position-fixed bottom-0 end-0 me-3 mb-5" style="z-index: 1050; width: 85px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="85">
+</a>
+
+
+
+
+<section class="contact-section">
+    <div class="container px-4">
+        <div class="row text-center text-md-start mb-5">
+            <div class="col-12">
+                <h2 class="section-title">Schedule Your Appointment</h2>
+                <p class="section-subtitle">
+                    We're committed to providing you with the best care possible. Schedule an appointment today and take the first step towards better health.
+                </p>
+            </div>
+        </div>
+        <div class="row align-items-stretch">
+            <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                <div class="appointment-form-card h-100">
+                    <form>
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phoneNumber" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phoneNumber" placeholder="+91 98765 43210">
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailAddress" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="emailAddress" placeholder="you@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="preferredDate" class="form-label">Preferred Date</label>
+                            <input type="date" class="form-control" id="preferredDate">
+                        </div>
+                        <div class="mb-4">
+                            <label for="reasonForVisit" class="form-label">Reason for Visit</label>
+                            <select class="form-select" id="reasonForVisit">
+                                <option selected disabled>Select a reason</option>
+                                <option>Routine Gynecological Care</option>
+                                <option>Pregnancy Care</option>
+                                <option>Menopause Management</option>
+                                <option>Family Planning</option>
+                                <option>Other / General Inquiry</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary-custom">Submit Appointment</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="clinic-info-card h-100">
+                    <h4>Clinic Hours</h4>
+                    <ul class="clinic-hours-list">
+                        <li><span>Monday - Friday</span> <span>9:00 AM - 5:00 PM</span></li>
+                        <li><span>Saturday</span> <span>9:00 AM - 2:00 PM</span></li>
+                        <li><span>Sunday</span> <span>Closed</span></li>
+                    </ul>
+
+                    <h4>Contact Information</h4>
+                    <ul class="contact-details-list">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                Address<br>
+                                sector a, eng college aliganj<br>
+                                Lucknow, 222412
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                Phone<br>
+                                +91 0000000000
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                Email<br>
+                                info@gmail.com
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="faq-section">
+    <div class="container px-4">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+            Find answers to common questions about our services, appointments, and clinic policies.
+        </p>
+
+        <div class="accordion faq-accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        What services does Dr. Sharma's clinic offer?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Dr. Sharma's clinic offers a comprehensive range of gynecological services, including routine check-ups, prenatal and postnatal care, menopause management, family planning, gynecological surgery, and adolescent gynecology.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How can I book an appointment?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        You can book an appointment by filling out the online form in our 'Schedule Your Appointment' section, or by calling us directly at +91 98765 43210 during clinic hours.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        What are the clinic hours?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Our clinic hours are Monday to Friday from 9:00 AM to 5:00 PM, and Saturday from 9:00 AM to 2:00 PM. We are closed on Sundays.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Do you accept new patients?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes, Dr. Sharma's clinic is currently accepting new patients. We look forward to welcoming you to our practice.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Is Dr. Sharma a board-certified gynecologist?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes, Dr. Priya Sharma is a board-certified gynecologist with over 20 years of experience in women's healthcare.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="site-footer">
+    <div class="container px-4">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                <a class="footer-logo" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-heart-fill me-2" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 1.314C3.243-3.236-.881 4.757 3.712 8S2.222 13.914 8 13.914c5.778 0 1.288-5.914 6.288-9.914S12.757-3.236 8 1.314z"/>
+                    </svg>
+                    Clinic
+                </a>
+                <p>Providing specialized gynecological care with a gentle touch. Your health and comfort are our priority.</p>
+                <div class="footer-social-links mt-3">
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="javascript:;"><i class="fab fa-twitter"></i></a>
+                    <a href="javascript:;"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                <h5 class="text-white mb-4">Quick Links</h5>
+                <ul class="footer-links" style="padding-left: 0 !important; ">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="testimonial.html">Testimonials</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5 class="text-white mb-4">Contact Info</h5>
+                <ul class="footer-contact-info" style="padding-left: 0 !important;">
+                    <li class="d-flex align-items-center">
+                        <p><i class="fas fa-map-marker-alt"></i> Sector A, Eng College Aliganj<br>Lucknow, 222412</p>
+                    </li>
+                    <li class="d-flex">
+                        <p><i class="fas fa-phone-alt"></i> +91 00000000</p>
+                    </li>
+                    <li class="d-flex">
+                        <p><i class="fas fa-envelope"></i> info@gmail.com</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-white mb-4">Newsletter</h5>
+                <p>Subscribe to our newsletter for the latest updates.</p>
+                <form class="position-relative footer-newsletter">
+                    <input type="email" class="form-control" placeholder="Your Email">
+                    <button class="btn" type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="row footer-bottom pt-4 mt-4">
+            <div class="col-12 text-center">
+                <p>&copy; <span id="current-year"></span> Clinic's Health. All rights reserved.</p>
+                <p>Designed & Developed with ❤️</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor - Our Service</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container px-4">
+        <a class="navbar-brand" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1.314C3.243-3.236-.881 4.757 3.712 8S2.222 13.914 8 13.914c5.778 0 1.288-5.914 6.288-9.914S12.757-3.236 8 1.314z"/>
+            </svg>
+            Clinic
+        </a>
+        <button class="navbar-toggler border-0 outline-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav align-items-lg-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="service.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="testimonial.html">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                
+                <li class="nav-item ms-lg-3">
+                    <a href="tel:+00000000000" class="text-white text-decoration-none py-3 px-3 rounded" style="background-color: #e91e63;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-telephone-fill me-2" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.313 1.62a1.745 1.745 0 0 1 .163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702A18.6 18.6 0 0 1 0 7.025C0 3.868 2.304 1.562 1.885.511"/>
+                        </svg>
+                        +91 000000000
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="height: 100vh;"> 
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+            <a class="navbar-brand" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1.314C3.243-3.236-.881 4.757 3.712 8S2.222 13.914 8 13.914c5.778 0 1.288-5.914 6.288-9.914S12.757-3.236 8 1.314z"/>
+            </svg>
+            Clinic
+        </a>
+        </h5>
+        <button type="button" class="btn-close text-dark bg-dark text-reset border-0 outline-0 shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-content-wrapper">
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="service.html">Services</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="testimonial.html">Testimonial</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                
+            </ul>
+
+            <div class="search-section my-3 px-3"> <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+
+            <div class="social-icons text-center my-4">
+                <a href="#" class="mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="mx-2"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="mx-2"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="offcanvas-footer-call text-center text-white py-3" style="background-color: #f8f9fa;"> <a href="tel:+919565365773" class="text-decoration-none text-white"> <i class="fas fa-phone-alt me-2"></i> +91 0000000000
+        </a>
+    </div>
+</div>
+
+<a href="https://wa.me/+0000000000" class="position-fixed bottom-0 end-0 me-3 mb-5" style="z-index: 1050; width: 85px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="85">
+</a>
+
+
+<section class="services-section">
+    <div class="container px-4">
+        <h2 class="section-title">Our Comprehensive Services</h2>
+        <p class="section-subtitle">We offer a wide range of specialized gynecological services, tailored to meet the unique health needs of women at every stage of life.</p>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col service-card-col">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-file-medical"></i>
+                    </div>
+                    <h4>Routine Gynecological Care</h4>
+                    <p>Regular check-ups, pap smears, and preventive screenings to maintain your reproductive health.</p>
+                    <a href="#" class="learn-more">Learn more <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+            </div>
+            <div class="col service-card-col">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <h4>Pregnancy Care</h4>
+                    <p>Comprehensive prenatal care, delivery services, and postnatal support for a healthy pregnancy journey.</p>
+                    <a href="#" class="learn-more">Learn more <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+            </div>
+            <div class="col service-card-col">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-person"></i>
+                    </div>
+                    <h4>Menopause Management</h4>
+                    <p>Specialized care and treatment options to help manage symptoms and maintain quality of life during menopause.</p>
+                    <a href="#" class="learn-more">Learn more <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+            </div>
+            <div class="col service-card-col">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h4>Family Planning</h4>
+                    <p>Counselling and services for contraception, fertility awareness, and planning for your family's future.</p>
+                    <a href="#" class="learn-more">Learn more <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+            </div>
+            <div class="col service-card-col">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+                    <h4>Gynecological Surgery</h4>
+                    <p>Advanced surgical procedures using minimally invasive techniques for faster recovery and better outcomes.</p>
+                    <a href="#" class="learn-more">Learn more <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+            </div>
+            <div class="col service-card-col">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-calendar-alt"></i>
+                    </div>
+                    <h4>Adolescent Gynecology</h4>
+                    <p>Specialized care for young women with a gentle approach to address their unique health needs.</p>
+                    <a href="#" class="learn-more">Learn more <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container px-4">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                <a class="footer-logo" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-heart-fill me-2" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 1.314C3.243-3.236-.881 4.757 3.712 8S2.222 13.914 8 13.914c5.778 0 1.288-5.914 6.288-9.914S12.757-3.236 8 1.314z"/>
+                    </svg>
+                    Clinic
+                </a>
+                <p>Providing specialized gynecological care with a gentle touch. Your health and comfort are our priority.</p>
+                <div class="footer-social-links mt-3">
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="javascript:;"><i class="fab fa-twitter"></i></a>
+                    <a href="javascript:;"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                <h5 class="text-white mb-4">Quick Links</h5>
+                <ul class="footer-links" style="padding-left: 0 !important; ">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5 class="text-white mb-4">Contact Info</h5>
+                <ul class="footer-contact-info" style="padding-left: 0 !important;">
+                    <li class="d-flex align-items-center">
+                        
+                        <p><i class="fas fa-map-marker-alt"></i> Sector A, Eng College Aliganj<br>Lucknow, 222412</p>
+                    </li>
+                    <li class="d-flex">
+                        <p><i class="fas fa-phone-alt"></i> +91 000000000000</p>
+                    </li>
+                    <li class="d-flex">
+                        <p><i class="fas fa-envelope"></i> info@gmail.com</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-white mb-4">Newsletter</h5>
+                <p>Subscribe to our newsletter for the latest updates.</p>
+                <form class="position-relative footer-newsletter">
+                    <input type="email" class="form-control" placeholder="Your Email">
+                    <button class="btn" type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="row footer-bottom pt-4 mt-4">
+            <div class="col-12 text-center">
+                <p>&copy; 2025 Clinic's Health. All rights reserved.</p>
+                <p>Designed & Developed with ❤️</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
