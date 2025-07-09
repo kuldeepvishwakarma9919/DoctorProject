@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor - Testimonial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <style>
+        /* Specific styles for the testimonials page */
+        .testimonials-section {
+            padding: 80px 0;
+            background-color: var(--light-pink);
+        }
+
+        .testimonial-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .testimonial-card .quote-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color); /* Assuming primary-color is defined in style.css for pink */
+            margin-bottom: 20px;
+        }
+
+        .testimonial-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            flex-grow: 1; /* Allow paragraph to take available space */
+        }
+
+        .testimonial-author {
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .testimonial-author h5 {
+            margin-bottom: 5px;
+            color: var(--dark-blue); /* Assuming dark-blue is defined in style.css */
+        }
+
+        .testimonial-author .stars i {
+            color: gold;
+            margin-right: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container px-4">
+        <a class="navbar-brand" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1.314C3.243-3.236-.881 4.757 3.712 8S2.222 13.914 8 13.914c5.778 0 1.288-5.914 6.288-9.914S12.757-3.236 8 1.314z"/>
+            </svg>
+            Clinic
+        </a>
+        <button class="navbar-toggler border-0 outline-0 shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav align-items-lg-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="service.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="testimonial.html">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                
+                <li class="nav-item ms-lg-3">
+                    <a href="tel:+000000000000" class="text-white text-decoration-none py-3 px-3 rounded" style="background-color: #e91e63;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-telephone-fill me-2" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.313 1.62a1.745 1.745 0 0 1 .163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702A18.6 18.6 0 0 1 0 7.025C0 3.868 2.304 1.562 1.885.511"/>
+                        </svg>
+                        +91 0000000000
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="height: 100vh;"> 
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+            <a class="navbar-brand" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1.314C3.243-3.236-.881 4.757 3.712 8S2.222 13.914 8 13.914c5.778 0 1.288-5.914 6.288-9.914S12.757-3.236 8 1.314z"/>
+            </svg>
+            Clinic
+        </a>
+        </h5>
+        <button type="button" class="btn-close text-dark bg-dark text-reset border-0 outline-0 shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <!-- <div class="top-info px-4"> <h6 class="offcanvas-subtitle text-muted">Consulting Gynaecologist & Laparoscopic Surgeon</h6>
+    </div> -->
+
+    <div class="offcanvas-content-wrapper">
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                </li>
+               
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="service.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="testimonial.html">Testimonial</a>
+                </li>
+            </ul>
+
+            <div class="search-section my-3 px-3"> <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+
+            <div class="social-icons text-center my-4">
+                <a href="#" class="mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="mx-2"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#" class="mx-2"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="offcanvas-footer-call text-center text-white py-3" style="background-color: #f8f9fa;"> <a href="tel:+00000000" class="text-decoration-none text-white"> <i class="fas fa-phone-alt me-2"></i> +91 0000000000
+        </a>
+    </div>
+</div>
+
+<a href="https://wa.me/+00000000000" class="position-fixed bottom-0 end-0 me-3 mb-5" style="z-index: 1050; width: 85px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="85">
+</a>
+
+<section class="testimonials-section">
+    <div class="container px-4">
+        <h2 class="section-title">What Our Patients Say</h2>
+        <p class="section-subtitle">Hear directly from the women whose lives we've touched with compassionate care and expert medical attention.</p>
+
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>"Dr. Riya Sharma is an incredibly compassionate and skilled gynecologist. She made me feel so comfortable and explained everything clearly. I highly recommend her for any women's health needs."</p>
+                    <div class="testimonial-author">
+                        <h5>Priya Sharma</h5>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>"The clinic has a very welcoming atmosphere, and the staff are always helpful. Dr. Ali's expertise in fertility treatment gave us hope, and now we are blessed with a healthy baby."</p>
+                    <div class="testimonial-author">
+                        <h5>Anjali Singh</h5>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>"I had a high-risk pregnancy, and Dr. Athar Ali managed it with utmost care and professionalism. I felt safe and supported throughout the entire journey. Truly a blessing!"</p>
+                    <div class="testimonial-author">
+                        <h5>Sneha Verma</h5>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>"Dealing with PCOD was challenging, but Dr. Ali provided a clear and effective treatment plan. My symptoms have significantly improved, and I'm very grateful."</p>
+                    <div class="testimonial-author">
+                        <h5>Deepa Kumari</h5>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>"The laparoscopic surgery performed by Dr. Ali was minimally invasive, and my recovery was much faster than I expected. Excellent surgical skills and post-operative care."</p>
+                    <div class="testimonial-author">
+                        <h5>Radhika Devi</h5>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-card">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>"For menstrual disorders, Dr. Athar Ali offered practical solutions and empathetic listening. I finally feel understood and am on the path to better health."</p>
+                    <div class="testimonial-author">
+                        <h5>Kavita Gupta</h5>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </div>
+</section>
+
+
+<footer class="site-footer">
+    <div class="container px-4">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                <a class="footer-logo" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-heart-fill me-2" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 1.314C3.243-3.236-.881 4.757 3.712 8S2.222 13.914 8 13.914c5.778 0 1.288-5.914 6.288-9.914S12.757-3.236 8 1.314z"/>
+                    </svg>
+                    Clinic
+                </a>
+                <p>Providing specialized gynecological care with a gentle touch. Your health and comfort are our priority.</p>
+                <div class="footer-social-links mt-3">
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="javascript:;"><i class="fab fa-twitter"></i></a>
+                    <a href="javascript:;"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                <h5 class="text-white mb-4">Quick Links</h5>
+                <ul class="footer-links" style="padding-left: 0 !important; ">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="testimonial.html">Testimonials</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5 class="text-white mb-4">Contact Info</h5>
+                <ul class="footer-contact-info" style="padding-left: 0 !important;">
+                    <li class="d-flex align-items-center">
+                        <p><i class="fas fa-map-marker-alt"></i> Sector A, Eng College Aliganj<br>Lucknow, 222412</p>
+                    </li>
+                    <li class="d-flex">
+                        <p><i class="fas fa-phone-alt"></i> +91 00000000</p>
+                    </li>
+                    <li class="d-flex">
+                        <p><i class="fas fa-envelope"></i> info@gmail.com</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-white mb-4">Newsletter</h5>
+                <p>Subscribe to our newsletter for the latest updates.</p>
+                <form class="position-relative footer-newsletter">
+                    <input type="email" class="form-control" placeholder="Your Email">
+                    <button class="btn" type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="row footer-bottom pt-4 mt-4">
+            <div class="col-12 text-center">
+                <p>&copy; <span id="current-year"></span> Clinic's Health. All rights reserved.</p>
+                <p>Designed & Developed with ❤️</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
