@@ -1,7 +1,7 @@
 @media (max-width: 450px) {
   .hero-section .btn-primary-custom{
       border-radius: 30px;
-      width: 70% !important;
+      width: 100% !important;
   }
 
   .hero-section .btn-outline-custom{
